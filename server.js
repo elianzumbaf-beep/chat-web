@@ -1,29 +1,29 @@
 // server.js
-const express = require("express");
+const express = require('express');
 const app = express();
-const http = require("http").createServer(app);
-const io = require("socket.io")(http);
+const http = require('http').createServer(app);
+const io = require('socket.io')(http);
 
-// Servir los archivos de la carpeta public/
-app.use(express.static("public"));
+// Carpeta pública donde está tu index.html y estilos
+app.use(express.static('public'));
 
-// Cada vez que un usuario se conecta
-io.on("connection", (socket) => {
-  console.log("Usuario conectado");
+// Cuando un usuario se conecta
+io.on('connection', (socket) => {
+  console.log('Un usuario se conectó');
 
-  // Cuando alguien envía un mensaje, lo enviamos a todos
-  socket.on("mensaje", (msg) => {
-    io.emit("mensaje", msg);
+  // Escuchar mensajes del cliente
+  socket.on('chat message', (msg) => {
+    // Enviar mensaje a todos los usuarios conectados
+    io.emit('chat message', msg);
   });
 
-  // Cuando alguien se desconecta
-  socket.on("disconnect", () => {
-    console.log("Usuario desconectado");
+  socket.on('disconnect', () => {
+    console.log('Un usuario se desconectó');
   });
 });
 
-// Puerto 3000 (o el que el host asigne)
+// Puerto para Render o local
 const PORT = process.env.PORT || 3000;
 http.listen(PORT, () => {
-  console.log("Servidor corriendo en puerto " + PORT);
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
 });

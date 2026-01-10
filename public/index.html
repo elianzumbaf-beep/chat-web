@@ -1,174 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>🎬 K-Drama Top</title>
-
-  <!-- FUENTES -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background-image: url("images/fondo.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      font-family: 'Poppins', sans-serif;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    /* Capa oscura para leer bien */
-    .overlay {
-      background: rgba(0, 0, 0, 0.65);
-      padding: 40px;
-      max-width: 900px;
-      border-radius: 25px;
-      color: white;
-      box-shadow: 0 0 30px rgba(0,0,0,0.5);
-    }
-
-    h1 {
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 42px;
-      margin-bottom: 25px;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.7;
-      margin-bottom: 15px;
-    }
-
-    ul {
-      margin-top: 20px;
-      margin-bottom: 25px;
-    }
-
-    li {
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-
-    .btn-kdrama {
-      display: block;
-      margin: 0 auto;
-      background: #ff6fae;
-      border: none;
-      padding: 14px 30px;
-      font-size: 17px;
-      color: white;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .btn-kdrama:hover {
-      background: #ff4f9a;
-      transform: scale(1.05);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>✨ K-Drama Chat ✨</title>
+<style>
+  body {
+    background-image: url('fondo.jpg'); /* tu fondo de K-Drama */
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  h1 {
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 2em;
+  }
+  #login {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #login button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  #chat {
+    display: none;
+  }
+  #messages {
+    list-style: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+  }
+  #messages li {
+    background: rgba(255,255,255,0.2);
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  #chat-form input {
+    padding: 10px;
+    width: 80%;
+  }
+  #chat-form button {
+    padding: 10px;
+  }
+</style>
 </head>
-
 <body>
-    <div class="overlay">
-    <h1>🔥 TOP 5 K-DRAMAS QUE NO VAS A SUPERAR 💔 🎬</h1>
+<div class="container">
+  <h1>✨ K-Drama Chat ✨</h1>
 
-    <p>
-      ✨ ¿Qué son los K-dramas? ✨  
-      Los K-dramas son series de televisión originarias de Corea del Sur 🇰🇷.
-      Se caracterizan por contar historias emocionales, profundas y muy humanas.
-      No son solo series, son experiencias que te hacen sentir, conectar y muchas
-      veces llorar sin aviso .
-    </p>
-
-    <p>
-      Lo que hace especiales a los K-dramas es su forma de narrar:
-      amores lentos pero intensos , miradas que dicen más que mil palabras 👀,
-      escenas cuidadas casi cinematográficas 🎥 y música que se queda en la cabeza
-      y en el corazón 🎶.
-    </p>
-
-    <p>
-      Suelen tener pocos episodios ⏳, lo que hace que cada historia esté bien
-      pensada y no se alargue de más. Tocan temas como el amor, la amistad,
-      la familia, los sueños, el dolor y la superación 🌙.
-      Además, mezclan géneros de una forma única:
-      Romance 💕 · Drama 🎭 · Comedia 😆 · Misterio 🔍 · Medicina 🏥 · Justicia ⚖️
-      · Psicología 🧠 · Fantasía ✨
-    </p>
-
-    <ul>
-      <li>💖 <strong>Crash Landing on You</strong></li>
-      <li>💖 <strong>Descendants of the Sun</strong></li>
-      <li>💖 <strong>Something in the Rain</strong></li>
-      <li>💖 <strong>Do You Like Brahms?</strong></li>
-    </ul>
-
-    <!-- BOTÓN -->
-    <button class="btn-kdrama" onclick="mostrarFormulario()">
-      Aquí va MUCHOS MÁS K-DRAMAS 💖 KR
-    </button>
-
-    <!-- FORMULARIO OCULTO -->
-    <div id="formulario" style="display:none; margin-top:25px;">
-      <label>✨ K-Drama</label>
-      <input type="text" placeholder="K-drama" />
-
-      <label>📺 Capítulos de K-Drama</label>
-      <input type="text" placeholder="Capítulo" />
-
-      <button class="btn-kdrama" style="margin-top:15px;">
-        Entrar
-      </button>
-    </div>
+  <div id="login">
+    <button id="start-btn">Ingresar al Chat Secreto</button>
   </div>
 
- <script>
-  function mostrarFormulario() {
-    const form = document.getElementById("formulario");
-    form.style.display = form.style.display === "none" ? "block" : "none";
-  }
-
-  // Validar y mostrar chat
-  document.getElementById("formulario").querySelector("button").onclick = function() {
-    const usuario = document.getElementById("formulario").querySelectorAll("input")[0].value;
-    const contraseña = document.getElementById("formulario").querySelectorAll("input")[1].value;
-
-    if(usuario === "✨ K-Drama" && contraseña === "📺 Capítulos de K-Drama") {
-      alert("¡Acceso concedido!");
-      document.getElementById("chat").style.display = "block";
-      document.getElementById("formulario").style.display = "none";
-    } else {
-      alert("Por el momento no tenemos k-dramas disponibles ❌");
-    }
-  }
-
-  // Función para enviar mensaje
-  function enviarMensaje() {
-    const input = document.getElementById("mensajeInput");
-    const mensajes = document.getElementById("mensajes");
-    if(input.value.trim() !== "") {
-      const p = document.createElement("p");
-      p.textContent = input.value;
-      mensajes.appendChild(p);
-      input.value = "";
-      mensajes.scrollTop = mensajes.scrollHeight;
-    }
-  }
-</script>
-<!-- CHAT SECRETO OCULTO -->
-<div id="chat" style="display:none; margin-top:20px;">
-  <div id="mensajes" style="background: rgba(255,255,255,0.2); padding:20px; border-radius:15px; max-height:300px; overflow-y:auto; color:white; font-size:16px;"></div>
-  <input id="mensajeInput" type="text" placeholder="Escribe tu mensaje..." style="width:80%; padding:10px; border-radius:15px; border:none; margin-top:10px;">
-  <button onclick="enviarMensaje()" style="padding:10px 20px; border-radius:15px; border:none; background:#ff6fae; color:white; cursor:pointer;">Enviar</button>
+  <div id="chat">
+    <ul id="messages"></ul>
+    <form id="chat-form">
+      <input id="chat-input" autocomplete="off" placeholder="Escribe tu mensaje..." />
+      <button>Enviar</button>
+    </form>
+  </div>
 </div>
 
-</body>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io();
 
+  const startBtn = document.getElementById('start-btn');
+  const loginDiv = document.getElementById('login');
+  const chatDiv = document.getElementById('chat');
+
+  startBtn.addEventListener('click', () => {
+    const username = prompt("Usuario: ✨ K-Drama");
+    const roomCode = prompt("Código de Sala: 📺 Capítulos de K-Drama");
+
+    if(username === "✨ K-Drama" && roomCode === "📺 Capítulos de K-Drama"){
+      loginDiv.style.display = "none";
+      chatDiv.style.display = "block";
+    } else {
+      alert("Usuario o código incorrecto");
+    }
+  });
+
+  const form = document.getElementById('chat-form');
+  const input = document.getElementById('chat-input');
+  const messages = document.getElementById('messages');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if(input.value){
+      socket.emit('chat message', input.value);
+      input.value = '';
+    }
+  });
+
+  socket.on('chat message', function(msg){
+    const item = document.createElement('li');
+    item.textContent = msg;
+    messages.appendChild(item);
+    messages.scrollTop = messages.scrollHeight;
+  });
+</script>
+</body>
 </html>
