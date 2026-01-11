@@ -186,14 +186,14 @@ Por eso, es muy fácil engancharse… empiezas con “un capítulo” y terminas
   const messages = document.getElementById('messages');
 
   startBtn.addEventListener('click', () => {
-    const username = prompt("Usuario: ✨ K-Drama");
-    const roomCode = prompt("Código de Sala: 📺 Capítulos de K-Drama");
+    const username = prompt("🎬 Cuéntanos tu K-Drama favorito 💌: ✨ K-Drama");
+    const roomCode = prompt("Capítulo de tu K-Drama favorito ✍️: 📺 Capítulos de K-Drama");
 
     if(username === "✨ K-Drama" && roomCode === "📺 Capítulos de K-Drama"){
       loginDiv.style.display = "none";
       chatDiv.style.display = "block";
     } else {
-      alert("Usuario o código incorrecto");
+      alert("Tu k-drama no está disponible 🥺");
     }
   });
 
