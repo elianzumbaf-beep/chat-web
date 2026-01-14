@@ -17,7 +17,7 @@ io.on('connection', (socket) => {
     io.emit('chat message', msg);
   });
 
-  // 🔴 NUEVO: borrar el chat para TODOS
+  // 🔴 AÑADIDO: borrar chat para TODOS
   socket.on('clear chat', () => {
     io.emit('clear chat');
   });
