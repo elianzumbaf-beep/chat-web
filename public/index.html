@@ -5,106 +5,113 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>✨🎬 Capítulo K-Drama ✨</title>
 <style>
-  body {
-    background-image: url('fondo.jpg');
-    background-size: cover;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-    margin: 0;
-    padding: 20px;
-  }
+body {
+  background-image: url('fondo.jpg'); /* tu fondo de K-Drama */
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
 
-  .container {
-    max-width: 900px;
-    margin: 50px auto;
-    background-color: rgba(0,0,0,0.5);
-    padding: 25px;
-    border-radius: 15px;
-  }
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: rgba(0,0,0,0.5); /* semitransparente para el texto */
+  padding: 25px;
+  border-radius: 15px;
+}
 
-  h1 {
-    text-align: center;
-    font-size: 2.8em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px black;
-  }
+h1 {
+  text-align: center;
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px black;
+}
 
-  #info {
-    font-size: 1.1em;
-    line-height: 1.5;
-    margin-bottom: 25px;
-  }
+#info {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
 
-  #login {
-    text-align: center;
-    margin-bottom: 20px;
-  }
+#info ul {
+  margin-left: 20px;
+}
 
-  #start-btn {
-    background-color: #ff4081;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-  }
+#info li {
+  margin-bottom: 8px;
+}
 
-  #chat {
-    display: none;
-    margin-top: 20px;
-  }
+#login {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-  #messages {
-    list-style: none;
-    padding: 0;
-    max-height: 300px;
-    overflow-y: auto;
-    margin-bottom: 10px;
-  }
+#start-btn {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-  #messages li {
-    background: rgba(255,255,255,0.1);
-    padding: 5px 10px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-  }
+#start-btn:hover {
+  background-color: #e73370;
+}
 
-  #chat-form {
-    display: flex;
-    gap: 10px;
-  }
+#chat {
+  display: none;
+  margin-top: 20px;
+}
 
-  #chat-form input {
-    padding: 10px;
-    width: 70%;
-    border-radius: 10px;
-    border: none;
-  }
+#messages {
+  list-style: none;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
 
-  #chat-form button {
-    padding: 10px 15px;
-    border-radius: 10px;
-    border: none;
-    background-color: #ff4081;
-    color: white;
-    cursor: pointer;
-  }
+#messages li {
+  background: rgba(255,255,255,0.1);
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
 
-  /* 🔴 AÑADIDO: botón borrar */
-  #clear-chat-btn {
-    background-color: rgba(0,0,0,0.6);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 14px;
-    cursor: pointer;
-    font-size: 16px;
-  }
+#messages li.user1 {
+  background-color: rgba(255, 192, 203,0.2);
+  align-self: flex-start;
+}
 
-  #clear-chat-btn:hover {
-    background-color: rgba(0,0,0,0.85);
-  }
+#messages li.user2 {
+  background-color: rgba(173, 216, 230,0.2);
+  align-self: flex-end;
+}
+
+#chat-form input {
+  padding: 10px;
+  width: 75%;
+  border-radius: 10px;
+  border: none;
+}
+
+#chat-form button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ff4081;
+  color: white;
+  cursor: pointer;
+}
+
+#chat-form button:hover {
+  background-color: #e73370;
+}
 </style>
 </head>
 
@@ -113,7 +120,49 @@
   <h1>✨ 🔥 TOP 5 K-DRAMAS QUE NO VAS A SUPERAR 🎬 ✨</h1>
 
   <div id="info">
-    <!-- (todo tu texto original intacto) -->
+    <p>🇰🇷✨ ¿QUÉ SON LOS K-DRAMAS? ✨🇰🇷</p>
+
+    <p>Los K-dramas son series de televisión originarias de Corea del Sur 🎥🌸 que se caracterizan por contar historias emocionales, profundas y muy humanas. No son solo series: son experiencias que te hacen sentir, conectar y muchas veces llorar sin aviso 😭💔.</p>
+
+    <p>Lo que hace especiales a los K-dramas es su forma de narrar:
+    💞 Amores lentos pero intensos
+    👀 Miradas que dicen más que mil palabras
+    🌙 Escenas cuidadas, casi cinematográficas
+    🎶 Música que se queda en la cabeza y en el corazón</p>
+
+    <p>Suelen tener pocos episodios ⏳, lo que hace que cada historia esté bien pensada, sin alargarse de más. Tocan temas como el amor, la amistad, la familia, los sueños, el dolor y la superación 🌱💫.</p>
+
+    <p>Además, mezclan géneros de una forma única:
+    💕 Romance
+    🎭 Drama
+    😂 Comedia
+    🔍 Misterio
+    🩺 Medicina
+    ⚖️ Justicia
+    🧠 Psicología
+    ✨ Fantasía</p>
+
+    <p>Por eso, es muy fácil engancharse… empiezas con “un capítulo” y terminas viendo toda la serie de madrugada 🌙📺.</p>
+
+    <p>🎬💖 EJEMPLOS DE K-DRAMAS POPULARES 🎬</p>
+
+    <p>
+    🌸 Crash Landing on You – Amor imposible, destinos cruzados  
+    🌙 Goblin – Fantasía, romance y tristeza eterna  
+    👩‍⚕️ It’s Okay to Not Be Okay – Sanar, amar y aceptarse  
+    🎓 Extraordinary You – Amor juvenil con giros inesperados  
+    ⚖️ Vincenzo – Justicia, mafia y humor oscuro 🕶️🔥
+    </p>
+
+    <ul>
+      <li>💎 Crash Landing on You – Romance y drama inolvidable</li>
+      <li>💎 Goblin – Fantasía, amor y misterio</li>
+      <li>💎 Itaewon Class – Inspirador y motivador</li>
+      <li>💎 Vincenzo – Comedia negra y justicia</li>
+      <li>💎 Start-Up – Innovación y crecimiento personal</li>
+      <li>🎬 Tips para ver K-Dramas: prepara snacks, toma notas de tus personajes favoritos y disfruta de la banda sonora.</li>
+      <li>🎬 Apps recomendadas: Viki, Netflix, Kocowa y Rakuten para ver series completas.</li>
+    </ul>
   </div>
 
   <div id="login">
@@ -122,64 +171,55 @@
 
   <div id="chat">
     <ul id="messages"></ul>
-
     <form id="chat-form">
       <input id="chat-input" autocomplete="off" placeholder="💖 Escribe tu K-Drama favorito ✍️" />
       <button>🎬 Buscar K-Drama</button>
-
-      <!-- 🔴 AÑADIDO: botón borrar chat -->
-      <button type="button" id="clear-chat-btn">🔎</button>
     </form>
   </div>
 </div>
 
 <script src="/socket.io/socket.io.js"></script>
 <script>
-  const socket = io();
+const socket = io();
 
-  const startBtn = document.getElementById('start-btn');
-  const loginDiv = document.getElementById('login');
-  const chatDiv = document.getElementById('chat');
-  const form = document.getElementById('chat-form');
-  const input = document.getElementById('chat-input');
-  const messages = document.getElementById('messages');
-  const clearBtn = document.getElementById('clear-chat-btn'); // 🔴 AÑADIDO
+const startBtn = document.getElementById('start-btn');
+const loginDiv = document.getElementById('login');
+const chatDiv = document.getElementById('chat');
+const form = document.getElementById('chat-form');
+const input = document.getElementById('chat-input');
+const messages = document.getElementById('messages');
 
-  startBtn.addEventListener('click', () => {
-    const username = prompt("🎬 Cuéntanos tu K-Drama favorito 💌: ✨ K-Drama");
-    const roomCode = prompt("Capítulo de tu K-Drama favorito ✍️: 📺 Capítulos de K-Drama");
+startBtn.addEventListener('click', () => {
+  const username = prompt("🎬 Cuéntanos tu K-Drama favorito 💌: ✨ K-Drama");
+  const roomCode = prompt("Capítulo de tu K-Drama favorito ✍️: 📺 Capítulos de K-Drama");
 
-    if(username === "✨ K-Drama" && roomCode === "📺 Capítulos de K-Drama"){
-      loginDiv.style.display = "none";
-      chatDiv.style.display = "block";
-    } else {
-      alert("Tu k-drama no está disponible 🥺");
-    }
-  });
+  if(username === "✨ K-Drama" && roomCode === "📺 Capítulos de K-Drama"){
+    loginDiv.style.display = "none";
+    chatDiv.style.display = "block";
+  } else {
+    alert("Tu k-drama no está disponible 🥺");
+  }
+});
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    if(input.value){
-      socket.emit('chat message', input.value);
-      input.value = '';
-    }
-  });
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if(input.value){
+    socket.emit('chat message', input.value);
+    input.value = '';
+  }
+});
 
-  socket.on('chat message', function(msg){
-    const item = document.createElement('li');
-    item.textContent = msg;
-    messages.appendChild(item);
-    messages.scrollTop = messages.scrollHeight;
-  });
-
-  /* 🔴 AÑADIDO: borrar chat global */
-  clearBtn.addEventListener('click', () => {
-    socket.emit('clear chat');
-  });
-
-  socket.on('clear chat', () => {
-    messages.innerHTML = '';
-  });
+socket.on('chat message', function(msg){
+  const item = document.createElement('li');
+  if(messages.children.length % 2 === 0){
+    item.classList.add('user1');
+  } else {
+    item.classList.add('user2');
+  }
+  item.textContent = msg;
+  messages.appendChild(item);
+  messages.scrollTop = messages.scrollHeight;
+});
 </script>
 </body>
 </html>
