@@ -4,166 +4,182 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>✨🎬 Capítulo K-Drama ✨</title>
-
 <style>
-body {
-  background-image: url('fondo.jpg');
-  background-size: cover;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
-  margin: 0;
-  padding: 20px;
-}
+  body {
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 20px;
+  }
 
-.container {
-  max-width: 900px;
-  margin: 50px auto;
-  background-color: rgba(0,0,0,0.5);
-  padding: 25px;
-  border-radius: 15px;
-}
+  .container {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: rgba(0,0,0,0.5);
+    padding: 25px;
+    border-radius: 15px;
+  }
 
-h1 {
-  text-align: center;
-  font-size: 2.8em;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 5px black;
-}
+  h1 {
+    text-align: center;
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px black;
+  }
 
-#chat {
-  display: none;
-  margin-top: 20px;
-}
+  #info {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
 
-#messages {
-  list-style: none;
-  padding: 0;
-  max-height: 300px;
-  overflow-y: auto;
-  margin-bottom: 10px;
-}
+  #login {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
-#messages li {
-  background: rgba(255,255,255,0.1);
-  padding: 6px 10px;
-  margin-bottom: 6px;
-  border-radius: 6px;
-}
+  #start-btn {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+  }
 
-.user1 { background-color: rgba(255,192,203,0.2); }
-.user2 { background-color: rgba(173,216,230,0.2); }
+  #chat {
+    display: none;
+    margin-top: 20px;
+  }
 
-#chat-form {
-  display: flex;
-  gap: 8px;
-}
+  #messages {
+    list-style: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+  }
 
-#chat-form input {
-  flex: 1;
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-}
+  #messages li {
+    background: rgba(255,255,255,0.1);
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
 
-#chat-form button {
-  padding: 10px 15px;
-  border-radius: 10px;
-  border: none;
-  background-color: #ff4081;
-  color: white;
-  cursor: pointer;
-}
+  #chat-form {
+    display: flex;
+    gap: 10px;
+  }
 
-#clear-btn {
-  background-color: rgba(0,0,0,0.6);
-  border: none;
-  border-radius: 10px;
-  padding: 10px 14px;
-  cursor: pointer;
-  color: white;
-  font-size: 16px;
-}
+  #chat-form input {
+    padding: 10px;
+    width: 70%;
+    border-radius: 10px;
+    border: none;
+  }
 
-#clear-btn:hover {
-  background-color: rgba(0,0,0,0.8);
-}
+  #chat-form button {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ff4081;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* 🔴 AÑADIDO: botón borrar */
+  #clear-chat-btn {
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  #clear-chat-btn:hover {
+    background-color: rgba(0,0,0,0.85);
+  }
 </style>
 </head>
 
 <body>
 <div class="container">
+  <h1>✨ 🔥 TOP 5 K-DRAMAS QUE NO VAS A SUPERAR 🎬 ✨</h1>
 
-<h1>🎬 K-Drama Chat Secreto</h1>
+  <div id="info">
+    <!-- (todo tu texto original intacto) -->
+  </div>
 
-<div id="login" style="text-align:center;">
-  <button id="start-btn">🎬 Muchos más K-Dramas que te encantarán 💕</button>
-</div>
+  <div id="login">
+    <button id="start-btn">🎬 Muchos más K-Dramas que te encantarán 💕</button>
+  </div>
 
-<div id="chat">
-  <ul id="messages"></ul>
+  <div id="chat">
+    <ul id="messages"></ul>
 
-  <form id="chat-form">
-    <input id="chat-input" placeholder="💬 Escribe aquí..." autocomplete="off">
+    <form id="chat-form">
+      <input id="chat-input" autocomplete="off" placeholder="💖 Escribe tu K-Drama favorito ✍️" />
+      <button>🎬 Buscar K-Drama</button>
 
-    <button type="submit">Buscar K-Drama</button>
-
-    <!-- 🔎 BOTÓN PARA BORRAR CHAT -->
-    <button type="button" id="clear-btn">🔎</button>
-  </form>
-</div>
-
+      <!-- 🔴 AÑADIDO: botón borrar chat -->
+      <button type="button" id="clear-chat-btn">🔎</button>
+    </form>
+  </div>
 </div>
 
 <script src="/socket.io/socket.io.js"></script>
 <script>
-const socket = io();
+  const socket = io();
 
-const startBtn = document.getElementById('start-btn');
-const loginDiv = document.getElementById('login');
-const chatDiv = document.getElementById('chat');
-const form = document.getElementById('chat-form');
-const input = document.getElementById('chat-input');
-const messages = document.getElementById('messages');
-const clearBtn = document.getElementById('clear-btn');
+  const startBtn = document.getElementById('start-btn');
+  const loginDiv = document.getElementById('login');
+  const chatDiv = document.getElementById('chat');
+  const form = document.getElementById('chat-form');
+  const input = document.getElementById('chat-input');
+  const messages = document.getElementById('messages');
+  const clearBtn = document.getElementById('clear-chat-btn'); // 🔴 AÑADIDO
 
-startBtn.addEventListener('click', () => {
-  const u = prompt("K-Drama");
-  const c = prompt("Capítulo");
+  startBtn.addEventListener('click', () => {
+    const username = prompt("🎬 Cuéntanos tu K-Drama favorito 💌: ✨ K-Drama");
+    const roomCode = prompt("Capítulo de tu K-Drama favorito ✍️: 📺 Capítulos de K-Drama");
 
-  if (u === "✨ K-Drama" && c === "📺 Capítulos de K-Drama") {
-    loginDiv.style.display = "none";
-    chatDiv.style.display = "block";
-  }
-});
+    if(username === "✨ K-Drama" && roomCode === "📺 Capítulos de K-Drama"){
+      loginDiv.style.display = "none";
+      chatDiv.style.display = "block";
+    } else {
+      alert("Tu k-drama no está disponible 🥺");
+    }
+  });
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  if (input.value) {
-    socket.emit('chat message', input.value);
-    input.value = '';
-  }
-});
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if(input.value){
+      socket.emit('chat message', input.value);
+      input.value = '';
+    }
+  });
 
-/* 🔥 BOTÓN DE BORRADO GLOBAL */
-clearBtn.addEventListener('click', () => {
-  socket.emit('clear chat');
-});
+  socket.on('chat message', function(msg){
+    const item = document.createElement('li');
+    item.textContent = msg;
+    messages.appendChild(item);
+    messages.scrollTop = messages.scrollHeight;
+  });
 
-/* MENSAJES */
-socket.on('chat message', msg => {
-  const li = document.createElement('li');
-  li.textContent = msg;
-  li.className = messages.children.length % 2 === 0 ? 'user1' : 'user2';
-  messages.appendChild(li);
-  messages.scrollTop = messages.scrollHeight;
-});
+  /* 🔴 AÑADIDO: borrar chat global */
+  clearBtn.addEventListener('click', () => {
+    socket.emit('clear chat');
+  });
 
-/* 🔥 BORRAR CHAT EN AMBOS LADOS */
-socket.on('clear chat', () => {
-  messages.innerHTML = '';
-});
+  socket.on('clear chat', () => {
+    messages.innerHTML = '';
+  });
 </script>
-
 </body>
 </html>
-
