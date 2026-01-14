@@ -17,6 +17,11 @@ io.on('connection', (socket) => {
     io.emit('chat message', msg);
   });
 
+  // 🔴 NUEVO: borrar el chat para TODOS
+  socket.on('clear chat', () => {
+    io.emit('clear chat');
+  });
+
   socket.on('disconnect', () => {
     console.log('Un usuario se desconectó');
   });
